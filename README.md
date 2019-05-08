@@ -10,6 +10,19 @@ Cool Links:
 - [Body Parser](https://www.npmjs.com/package/body-parser)
 - [Pug (EJS alternative)](https://pugjs.org)
 
+## REST Cheatsheet
+
+### CRUD to HTTP
+
+| Action    | HTTP verb/method | Example Routes
+| --------- | ---------------- | --------------
+|**C**reate | POST             | POST /dogs
+|**R**ead   | GET              | GET /dogs, GET /dogs/:id, GET /owners/:ownerId/:dogs
+|**U**pdate | PUT/PATCH        | PUT /dogs/:id
+|**D**elete | DELETE           | DELETE /dogs/:id
+
+**NOTE:** Browsers only support `GET` and `POST` actions from pure HTTP forms. To use `PUT`/`PATCH`/`DELETE` you'll either need to use client-side JS or the [`method-override`](http://expressjs.com/en/resources/middleware/method-override.html) middleware.
+
 ## Routes
 
 - ways of interacting with the "back end"/server/data
@@ -29,8 +42,6 @@ HTTP MEANS:
 - The receiver processes
 - And then the receiver sends back a response
 	- response: status code, data, headers
-
-
 
 We're going to be making these requests with the browser, through the URL bar and HTML forms. URL bars can only make GET requests. HTML forms can only make GET and POST requests by default. That means we won't be able to use PUT and DELETE routes without some extra setup.
 

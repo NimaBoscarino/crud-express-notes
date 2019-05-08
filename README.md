@@ -1,6 +1,6 @@
 # W 2 D 3: CRUD with Express
 
-REPO for code: https://github.com/NimaBoscarino/crud-notes
+REPO for code: https://github.com/NimaBoscarino/crud-express-notes
 
 
 Cool Links:

@@ -1,0 +1,22 @@
+<html>
+	<head>
+	</head>
+	<body>
+		<h1><%= video.title %></h1>
+		<h2><%= video.id %></h2>
+		<p><%= video.description %></p>
+		
+		<form method="POST" action="/videos/<%= video.id %>/delete">
+			<input type="submit" value="DESTROY">
+		</form>
+
+		<iframe width="560" height="315" src="https://www.youtube.com/embed/<%= video.id %>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+		<form method="POST" action="/videos/<%= video.id %>">
+			<p>Title <input name="title" type="text" value="<%= video.title %>"></p>
+			<p>Description <input name="description" type="text" value="<%= video.description %>"></p>
+			<input type="submit">
+		</form>
+
+	</body>
+</html>

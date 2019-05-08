@@ -1,0 +1,21 @@
+<html>
+	<head>
+	</head>
+	<body>
+		<h1>Videos!</h1>
+
+		<a href="/videos/new">New Video</a>
+
+		<ul>
+			<% for (let videoKey in videos) { %>
+				<li>
+					<a href="/videos/<%= videoKey %>">
+					<%= videoKey %>
+					 - 
+				    <%= videos[videoKey].title %>
+					</a>
+				</li>
+			<% } %>
+		</ul>
+	</body>
+</html>
